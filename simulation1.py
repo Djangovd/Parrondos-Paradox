@@ -58,7 +58,7 @@ for i in range(0,iter1):
         rev2 = toss(r1,p3,rev2)
 #    if i%100==0: print "Capital game2 = " + str(rev2)
     rev2arr.append(float(rev2))
-#    rev2arr.append(float(rev2)/float(i+1))
+
 plt.subplot(312)
 plt.plot(range(0,iter1),rev2arr)
 print "~~~~~~~~~~"   
@@ -66,7 +66,6 @@ rev1 = 0
 rev1arr = []
 for i in range(0,iter1):
     r1 = random.random()
-#    if i % 2 == 0:
     if r1 < 0.5 :
         rev1 = toss(r1,p1,rev1)
         print "game A"
@@ -76,9 +75,7 @@ for i in range(0,iter1):
         else:
             rev1 = toss(r1,p3,rev1)
         print "game B"    
-#    if i%100==0: print "Capital game 1+2 = " + str(rev1)
     rev1arr.append(float(rev1))
-#    rev1arr.append(float(rev1)/float(i+1))
-#print rev1arr
+
 plt.subplot(313)
 plt.plot(range(0,iter1),rev1arr)   
